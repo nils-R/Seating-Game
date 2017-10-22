@@ -24,9 +24,11 @@ When phase 2 starts, each player receives two characters that they are to look f
 <b>Example</b>
 Below is an example of a game played between 10 players. The diagram illustrates how all characters relate to each other. The table shows what individual players will see on their screens, where each row shows the perspective for any individual player.
 
-```{r, echo=FALSE,message=FALSE,results='markdown'} 
+```{r Example, echo=FALSE,message=FALSE,results='markdown'} 
 #!["Overview of connections"](https://github.com/nils-R/Seating-Game/Ring-Graph.png)
 #knitr::include_graphics('./Description_files/Ring-Graph.jpg')
 source("main.R")
 knitr::kable(playerFrame, center = TRUE, padding = 0)
 ```
+
+The full code to tailor the game to your own needs (number of players, what characters to use etc) can be found here: https://github.com/nils-R/Seating-Game
