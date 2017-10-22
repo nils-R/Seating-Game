@@ -5,7 +5,7 @@ UsePackage <- function(p) {
 }
 
 ChooseNumberOfPlayers <- function(){
-  x <- "20" #readline("How many players are there?")  
+  x <- "14" #readline("How many players are there?")  
   x <- as.numeric(unlist(strsplit(x, ",")))
   return(list(x))
 }
