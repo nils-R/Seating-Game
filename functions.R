@@ -5,7 +5,8 @@ UsePackage <- function(p) {
 }
 
 ChooseNumberOfPlayers <- function(){
-  x <- "14" #readline("How many players are there?")  
+  x <- "10" #readline("How many players are there?")  
+  # possible other input to be added here
   x <- as.numeric(unlist(strsplit(x, ",")))
   return(list(x))
 }
@@ -38,7 +39,7 @@ EstablishConnections <- function(nPlayers, playerFrame){
     }
     else
       playerFrame[i,1] <- playerFrame[i-1,2]
-    playerFrame[i,3] <- playerFrame[i+1,2]
+      playerFrame[i,3] <- playerFrame[i+1,2]
   }
 return (playerFrame)
 }

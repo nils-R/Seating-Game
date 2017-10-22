@@ -5,9 +5,11 @@ date: "22 oktober 2017"
 output:
   github_document: default
   html_document: default
-  fig_width: 20 
-  fig_height: 14
 ---
+
+```{r echo=FALSE}
+knitr::opts_chunk$set(fig.width=8, fig.height=8)
+```
 
 This is a game to randomly assign seating at parties and get-togethers in a fun way. The basic idea is to make people mix and mingle through role playing. It is divided into two phases:
 
@@ -20,9 +22,11 @@ Note: If the player does not recognize the character, he can request a new one. 
 When phase 2 starts, each player receives two characters that they are to look for. E.g., they may receive "James Bond" on their left hand side and "Dalai Lama" on their right. Now they should try to find these characters by observing and asking questions to the people around them. Once found, they are to lock arms and continue looking together for the person at the end of each side of their "chain". This continues until the whole group is arm-locked together and a big circle is formed.
 
 <b>Example</b>
-Below is an example of a game played between 14 players. The diagram illustrates how all characters relate to each other. The table shows what individual players will see on their screens, where each row shows the perspective for any individual player.
+Below is an example of a game played between 10 players. The diagram illustrates how all characters relate to each other. The table shows what individual players will see on their screens, where each row shows the perspective for any individual player.
 
 ```{r, echo=FALSE,message=FALSE,results='markdown'} 
+#!["Overview of connections"](https://github.com/nils-R/Seating-Game/Ring-Graph.png)
+#knitr::include_graphics('./Description_files/Ring-Graph.jpg')
 source("main.R")
-knitr::kable(playerFrame)
+knitr::kable(playerFrame, center = TRUE, padding = 0)
 ```
