@@ -1,5 +1,11 @@
+UsePackage <- function(p) {
+  if (!is.element(p, installed.packages()[,1]))
+    install.packages(p, dep = TRUE)
+  require(p, character.only = TRUE)
+}
+
 ChooseNumberOfPlayers <- function(){
-  x <- "14" #readline("How many players are there?")  
+  x <- "20" #readline("How many players are there?")  
   x <- as.numeric(unlist(strsplit(x, ",")))
   return(list(x))
 }
